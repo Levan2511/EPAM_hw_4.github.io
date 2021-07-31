@@ -1,0 +1,310 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body, p, h1  {
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+.header {
+    position: absolute;
+    z-index: 5;
+    width: calc(100% - 100px);
+    padding: 30px 50px;
+    nav {
+        display: flex;
+        width: 100%;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+.menu {
+    margin-left: auto;
+    width: 320px;
+    &__list {
+        justify-content: space-between;
+    }
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.promo {
+    position: relative;
+    min-height: 705px;
+    background: url(../img/apples.jpg) center (center/cover) no-repeat;
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .logo-text {
+        @extend .brand-text;
+        font-size: 3em;
+        line-height: 1.5em;
+        letter-spacing: 6px;
+        span {
+            font-size: 2em;
+        }
+    }
+    .brand-text {
+        color: #fff;
+        text-align: center;
+    }
+    &__more-info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px;
+        width: 200px;
+        height: 50px;
+        cursor: pointer;
+        background-color: rgba(0,0,0,.5);
+        border: 2px solid #fff;
+        color: #fff;
+    }
+}
+.descr {
+    padding: 100px 50px;
+    .wrapper {
+        display: flex;
+        p {
+            width: 50%;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    &__main {
+        font-size: 1.4em;
+        padding-right: 2em;
+    }
+}
+.articles {
+    padding: 120px 50px 50px;
+    background-color: #F3F3F3;
+    &__title {
+        margin-bottom: 70px;
+        text-align: center;
+        font-weight: normal;
+        span {
+            font-weight: bold;
+        }
+    }
+    .wrapper {
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 50px;
+            }
+            .item-img {
+                position: relative;
+                width: 60%;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    width: 60px;
+                    height: 30px;
+                    background-color: #6A6768;
+                    border: 3px solid #fff;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 20px;
+                    bottom: 20px;
+                    color: #fff;
+                }
+            }
+            .l172 {
+                &::after {
+                    content: '172 \2764';
+                }
+            }
+            .l20 {
+                &::after {
+                    content: '20 \2764';
+                }
+            }
+            .l150 {
+                &::after {
+                    content: '150 \2764';
+                }
+            }
+            .france {
+                &::before {
+                    content: 'Januari\'15 South France';
+                    font-weight: bold;
+                }
+            }
+            .usa {
+                &::before {
+                    content: 'Januari\'15 South America';
+                    font-weight: bold;
+                }
+            }
+            img {
+                width: 100%;
+                background: radial-gradient(red, blue);
+            }
+            &__descr {
+                width: 35%;
+                text-align: center;
+            }
+        }
+    }
+    .newsletter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100px;
+        padding: 0 20px;
+        background-color: #fff;
+        span {
+            font-weight: bold;
+        }
+        &__form {
+            display: flex;
+            align-items: center;
+            height: 50%;
+            width: 100%;
+            .emailLabel {
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+.emailInput {
+    width: 60%;
+    padding: 0;
+    margin-left: auto;
+    padding-left: 20px;
+    background-color: #F3F3F3;
+    border: 1px solid #000;
+    height: 100%;
+}
+.subscribeBtn {
+    background-color: #343638;
+    height: calc(100% + 2px);
+    width: 120px;
+    padding: 0;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.footer {
+    padding: 100px 50px 1em;
+    .info-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .info-item {
+            width: 22%;
+            .info-title {
+                font-weight: bold;
+            }
+            .info-descr {
+                margin-top: 15px;
+                color: #7a7a7a;
+                font-weight: 300;
+                font-size: .9em;
+            }
+            .tweet {
+                font-style: italic;
+                &__time {
+                    margin-top: .8em;
+                    color: rgba(182, 182, 182, 0.61);
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+    form {
+        display: flex;
+        margin-top: 10px;
+        height: 30px;
+    }
+    .subscribeBtn,
+    .emailInput {
+        font-size: .8em;
+    }
+    .emailInput {
+        margin-left: 0;
+        padding-left: 10px;
+        width: 70%;
+    }
+    .subscribeBtn {
+        width: 30%;
+    }
+    hr {
+        margin-top: 100px;
+    }
+    &__menu-wrapper {
+        display: flex;
+        .copyright-text {
+            font-size: .9em;
+            color: rgb(145, 145, 145);
+        }
+    }
+    .menu {
+       a {
+           color: #000;
+           text-decoration: none;
+       }
+    }
+}
+
+@media (max-width: 1280px) {
+    .footer {
+        .info-wrapper {
+            
+            form {
+                flex-direction: column;
+                height: 70px;
+                .emailInput {
+                    margin-left: 0;
+                    padding-left: 10px;
+                    width: 80%;
+                }
+                .subscribeBtn {
+                    width: 50%;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .emailInput {
+        width: 50%;
+    }
+}
+@media (max-width: 1050px) {
+    .emailInput {
+        width: 40%;
+    }
+    .footer {
+        .emailInput,
+        .subscribeBtn {
+            font-size: .7em;
+        }
+    }
+    .promo {
+        .logo-text {
+            font-size: 2.5em;
+        }
+    }
+}
